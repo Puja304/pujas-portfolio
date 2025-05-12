@@ -16,7 +16,7 @@ const ContactTile = (props) => {
     return (
         <div className='contact-tile'>
            <div className='contact-icon'>
-                <img src={`/assets/images/${img}`} />
+                <img src={`${process.env.PUBLIC_URL}/assets/images/${img}`} />
            </div>
             <div className="contact-text">
             {text1 && (

@@ -57,7 +57,7 @@ const ProjectModal = (props) => {
 
                 <div className='last-half'>
                     <div className='project-img'>
-                        <img src={`assets/images/${props.img}`}/>
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/${props.img}`}/>
                     </div>
                     <div className='vertical-checks'></div>
                     <div className='lang-fram'>

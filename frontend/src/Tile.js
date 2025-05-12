@@ -6,7 +6,7 @@ const Tile = (props) => {
   return (
     <button className='project-tile' onClick={onClick}>
         <div className='img-section'>
-            <img src={`/assets/images/${info.img}`} alt={info.name} loading="lazy"/>
+            <img src={`${process.env.PUBLIC_URL}/assets/images/${info.img}`} alt={info.name} loading="lazy"/>
         </div>
         <div className='project-info'>
             <text> 

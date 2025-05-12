@@ -13,7 +13,7 @@ const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
 
     useEffect(() => {
-    fetch('/assets/documents/projects.json')
+    fetch(`${process.env.PUBLIC_URL}/assets/documents/projects.json`)
         .then(res => res.json())
         .then(data => {
         setAllProjects(data);

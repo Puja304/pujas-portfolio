@@ -1,9 +1,0 @@
-# Ignore dependencies and builds
-node_modules/
-build/
-
-# Mac system file
-.DS_Store
-
-# Environment variables
-.env

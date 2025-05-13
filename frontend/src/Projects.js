@@ -1,7 +1,6 @@
-import {React, useState, UseState, useEffect} from 'react'
+import {React, useState, useEffect} from 'react'
 import Tile from './Tile';
 import ProjectModal from './ProjectModal'
-import { GiConsoleController } from 'react-icons/gi';
 
 
 

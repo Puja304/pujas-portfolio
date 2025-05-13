@@ -15,6 +15,7 @@ const Tile = (props) => {
             <text>{info.status}</text>
         </div>
         <div className='tag-marquee'>
+            {/* eslint-disable-next-line jsx-a11y/no-distracting-elements */}
             <marquee>
                 {[...info.languages, ...info.frameworks].map((item, index) => (
                     <span key={index} style={{ marginRight: '1rem' }}>

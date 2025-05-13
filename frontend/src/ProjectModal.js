@@ -14,7 +14,7 @@ const ProjectModal = (props) => {
                 </a>
                     <div className="status">
                         <span
-                            className={`dot ${props.status === "Completed" ? "green" : "red"}`}
+                            className={`dot ${props.status == "Completed" ? "green" : "red"}`}
                         ></span>
                         {props.status}
                     </div>
@@ -57,7 +57,7 @@ const ProjectModal = (props) => {
 
                 <div className='last-half'>
                     <div className='project-img'>
-                        <img src={`${process.env.PUBLIC_URL}/assets/images/${props.img}`}/>
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/${props.img}`} alt={`${props.name} image`}/>
                     </div>
                     <div className='vertical-checks'></div>
                     <div className='lang-fram'>

@@ -8,7 +8,7 @@
         "learnt":"Model Selection",
         "mode": "team",
         "difficulty": 2,
-        "img" : "spotify.jpg",
+        "img" : "spotify.png",
         "description": "This project is a machine learning–based system that recommends Spotify playlists based on current weather conditions. It pulls real-time weather data using a public API and cross-references it with a user’s Spotify listening history, fetched via the Spotify API. Songs are clustered by audio features, and weather patterns are matched to these clusters to uncover correlations between environment and musical preference. A supervised learning model is then used to predict and recommend songs that fit the user's current weather. The system demonstrates end-to-end ML development, including data collection, feature engineering, clustering, and predictive modeling.",
         "git":"https://github.com/Puja304/weather-based-music-recommender"
     },
@@ -21,7 +21,7 @@
         "learnt":"Audio Proc.",
         "mode":"solo",
         "difficulty": 2,
-        "img":"dubify.jpg",
+        "img":"dubify1.png",
         "description":"This project is an automated video dubbing system that takes a video as input, transcribes its audio, translates the speech into a target language, and generates a dubbed version with synthetic voiceover. It uses OpenAI’s Whisper for transcription, integrates a translation module, and applies a text-to-speech engine to synthesize natural-sounding audio. Audio is aligned and merged with the original video using precise timing to preserve lip sync and scene flow. A Python backend handles all processing, with a file upload interface that allows users to submit videos and download the dubbed output. This project highlights practical applications of speech processing, machine translation, and multimedia synchronization.",
         "git":"https://github.com/Puja304/video-dubber"
     },
@@ -34,7 +34,7 @@
         "learnt":"NLP",
         "mode":"team",
         "difficulty": 3,
-        "img":"hindi.jpg",
+        "img":"hindi.png",
         "description":"This project is part of a confidential research assistantship focused on developing machine learning models for semantic analysis of Hindi. I contribute to data preparation and cleaning, using my native fluency in Hindi to ensure linguistic accuracy and consistency. I am conducting data exploration to identify promising features and modeling directions, while researching and experimenting with relevant NLP techniques. Based on these findings, I provide recommendations for the modeling approach. I am also actively contributing to the development and refinement of the research paper.",
         "git":"https://github.com/Puja304/hindi-ra"
     },
@@ -47,7 +47,7 @@
         "learnt":"Modularity",
         "mode":"solo",
         "difficulty": 2,
-        "img":"adventure.jpg",
+        "img":"adventure.png",
         "description":"This is a text-based adventure game built in C++, where players explore a series of rooms, collect items like keys and weapons, and battle monsters in order to escape. The game is played entirely through the command line and uses custom structs and functions to manage game state, inventory, and room logic. While simple in design, it involved planning out game flow, condition handling, and creating a playable user experience without the use of external libraries or frameworks. This project was an early step in learning C++ programming and applying core concepts like control flow, functions, and structured data.",
         "git":"https://github.com/Puja304/adventureGame"
     },
@@ -60,7 +60,7 @@
         "learnt":"Multithreading",
         "mode":"solo",
         "difficulty": 2,
-        "img":"sys-networking.jpg",
+        "img":"sys-networking.png",
         "description":"This project is a multithreaded TCP group chat server written in C. It allows multiple clients to connect and exchange messages in real time using dedicated threads for each client and proper synchronization to handle concurrent access. The implementation required careful management of socket communication, thread safety, and memory allocation, showcasing lower-level systems programming skills. While the chat functionality is simple, the project emphasizes concurrency, socket APIs, and robust server design in C.",
         "git":"https://github.com/Puja304/group-chat-server"
     },
@@ -99,7 +99,7 @@
         "learnt":"Recursion",
         "mode":"solo",
         "difficulty": 1,
-        "img":"python.jpg",
+        "img":"python.png",
         "description":"This is a personal collection of small Python projects and experiments created during my first semester of programming. It includes command-line games like Minesweeper, Sudoku Solver, and Wordle — each helping me build foundational logic and problem-solving skills. I also explored simple UI development with projects like Tic-Tac-Toe using tkinter, as well as a variety of mini tools and number-based games. This repo served as a creative playground where I could try out new ideas, practice core programming concepts, and get comfortable with Python through hands-on experimentation.",
         "git":"https://github.com/Puja304/python-minis"
     },
@@ -112,7 +112,7 @@
         "learnt":"User Reqs.",
         "mode":"team",
         "difficulty": 2,
-        "img":"ist.jpg",
+        "img":"ist.png",
         "description":"This project was a semester-long team assignment for an introductory software engineering course, where we developed a fully functional issue tracking system for managing bug reports and feature requests. The development process followed a structured software engineering workflow, starting with stakeholder interviews (with TAs acting as clients) to elicit user requirements, followed by system modeling using UML diagrams, architectural planning, and iterative implementation. We produced extensive documentation at each stage — including requirements, design, and testing — totaling over 60 pages, and conducted thorough debugging and user testing before final delivery. This project emphasized teamwork, communication, and practical application of software engineering principles in a simulated real-world environment.",
         "git":"https://github.com/Puja304/IST"
     },
@@ -125,7 +125,7 @@
         "learnt":"Backend Integration",
         "mode":"solo",
         "difficulty": 1,
-        "img":"logical-lunacy.jpg",
+        "img":"logical-lunacy.png",
         "description":"This was an earlier iteration of my personal portfolio site, built as a full-stack application using React.js for the frontend and Node.js with PostgreSQL for the backend. The backend handled project data and user interaction, which gave me valuable experience with API design, server-side routing, and database integration. While the implementation was technically solid, I later realized that the added backend introduced unnecessary complexity for a portfolio site and limited my design flexibility. This project was key in helping me gain confidence with the full MERN-like stack and shaped the cleaner, more focused design choices in my current portfolio.",
         "git":"https://github.com/Puja304/logical-lunacy-2.0"
     },
@@ -138,7 +138,7 @@
         "learnt":"Pointer Management",
         "mode":"solo",
         "difficulty": 1,
-        "img":"foundations.jpg",
+        "img":"foundations.png",
         "description":"This project contains a collection of foundational computer science projects implemented in  C++, focusing on core data structures and algorithms. It includes custom implementations of abstract data types such as linked lists, stacks, queues, hash tables, binary trees, and binary heaps, all built from scratch to reinforce low-level programming concepts. The repo also features various sorting algorithms — including merge sort, quicksort, and heapsort — implemented with attention to performance and algorithmic behavior. These projects were developed as part of a some personal practice reflect hands-on experience with memory management, pointer logic, and efficient problem-solving in C++.",
         "git":"https://github.com/Puja304/cs-foundations"
     },
@@ -151,7 +151,7 @@
         "learnt":"Industry Standards",
         "mode":"team",
         "difficulty": 1,
-        "img":"friendsbook.jpg",
+        "img":"friendsbook.png",
         "description":"Friendsbook is a C++ console-based application that models a simplified social networking system. Users can be added, removed, searched, or updated, and the system maintains user profiles containing names, usernames, email addresses, and birthdays. The underlying data structure is a custom-built fixed-capacity ADT that stores users in alphabetically sorted buckets using arrays and a consistent hashing scheme based on username initials. The implementation includes dynamic memory management, copy constructors, and deep copying logic. Designed and tested as part of a data structures assignment, this project emphasizes careful class design, object-oriented programming, and robust testing of all edge cases.",
         "git":"https://github.com/Puja304/friendsbook"
     }

@@ -14,7 +14,7 @@ const ProjectModal = (props) => {
                 </a>
                     <div className="status">
                         <span
-                            className={`dot ${props.status == "Completed" ? "green" : "red"}`}
+                            className={`dot ${props.status === "Completed" ? "green" : "red"}`}
                         ></span>
                         {props.status}
                     </div>
@@ -44,7 +44,7 @@ const ProjectModal = (props) => {
                     </div>
                     <div className='mode'>
                         <b>Mode: </b>{props.mode.charAt(0).toUpperCase() + props.mode.slice(1)} &nbsp;
-                        {props.mode == "solo" ? <IoPerson/> : <RiTeamFill />}
+                        {props.mode === "solo" ? <IoPerson/> : <RiTeamFill />}
                         
                     </div>
                     <div className='difficulty'>

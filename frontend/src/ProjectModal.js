@@ -9,24 +9,24 @@ const ProjectModal = (props) => {
         <div className='project-window'>
 
             <div className='project-title-bar'>
-                <a href={props.git} target="_blank" rel="noopener noreferrer">
+                <div className="info-group">
+                    <a href={props.git} target="_blank" rel="noopener noreferrer">
                     <span className="project-name">{props.name}</span>
-                </a>
-                    <div className="status">
-                        <span
-                            className={`dot ${props.status === "Completed" ? "green" : "red"}`}
-                        ></span>
-                        {props.status}
-                    </div>
-                    <div className='date'>
-                        {props.date}
-                    </div>
-                    <div className="modal-buttons">
-                        <button class="modal-btn" onClick={props.onClose}>–</button>
-                        <button class="modal-btn">☐</button>
-                        <button class="modal-btn" onClick={props.onClose}>✕</button>
-                    </div>
+                    </a>
+                    <span className="status">
+                    <span className={`dot ${props.status === "Completed" ? "green" : "red"}`}></span>
+                    {props.status}
+                    </span>
+                    <span className="date">{props.date}</span>
+                </div>
+
+                <div className="modal-buttons">
+                    <button className="modal-btn" onClick={props.onClose}>–</button>
+                    <button className="modal-btn">☐</button>
+                    <button className="modal-btn" onClick={props.onClose}>✕</button>
+                </div>
             </div>
+
 
 
             <div className='project-win-body'>
@@ -65,7 +65,7 @@ const ProjectModal = (props) => {
                             <p><b>Languages</b><br/>{props.languages.join(", ")}</p>
                         </div>
                         <div className='frameworks'>
-                            <p><b>Frameworks</b><br/>{props.frameworks.join(", ")}</p>
+                            <p><b>Technologies</b><br/>{props.frameworks.join(", ")}</p>
                         </div>
                     </div>
                 </div>

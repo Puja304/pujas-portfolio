@@ -209,6 +209,18 @@ body{
     padding-right: 8.5rem;
 }
 
+.sorting button{
+    background-color: #FFE8CC;
+    border: none;
+    font-family: 'IBM Plex Sans';
+    font-size: medium;
+}
+
+.sorting button:hover{
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
 .projects-grid{
     margin-top: 3rem;
     display: grid;
@@ -248,15 +260,18 @@ body{
     border-bottom: 0.2rem solid black;
 }
 
-.project-info{
-    font-family: 'Space Mono';
-    display: flex;
-    flex-direction: column;
-    border-bottom: 0.2rem solid black;
-    text-align: left;
+.project-info {
+  font-family: 'Space Mono';
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.2rem solid black;
+  text-align: left;
+  height: 7rem; /* fixed height for uniformity */
+  justify-content: center; /* vertical alignment */
 }
 
-.project-info text{
+
+.project-info p{
     margin: 0.5rem 0;
     padding-left: 0.5rem;
 }
@@ -413,7 +428,7 @@ body{
   background: #fff;
   border: 2px solid #000;
   box-shadow: 8px 8px 0 #000;
-  max-width: 90vw;
+  max-width: 60vw;
   max-height: 90vh;
   min-width: 55vw;
   min-height: 65vh;
@@ -431,17 +446,27 @@ body{
     padding: 0.35rem 0.5rem;
 }
 
-.project-title-bar a{
-    text-decoration: none !important;
-    font-size: 1.25rem;
-    color: black;
+.info-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.status{
-    background-color: #9B34D7;
-    border-radius: 16px;
-    padding: 0% 0.5rem;
-    align-self: center;
+.project-title-bar a {
+  text-decoration: none !important;
+  font-size: 1.25rem;
+  color: black;
+}
+
+.status,
+.date {
+  background-color: #9B34D7;
+  border-radius: 16px;
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
 
 .dot {
@@ -458,13 +483,6 @@ body{
 
 .red {
   background-color: #e74c3c; 
-}
-
-.date{
-    background-color: #9B34D7;
-    border-radius: 16px;
-    padding: 0% 0.5rem;
-    align-self: center;
 }
 
 .modal-buttons{

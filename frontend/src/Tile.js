@@ -9,10 +9,10 @@ const Tile = (props) => {
             <img src={`${process.env.PUBLIC_URL}/assets/images/${info.img}`} alt={info.name} loading="lazy"/>
         </div>
         <div className='project-info'>
-            <text> 
+            <p> 
                 <b>{info.name}</b>
-            </text>
-            <text>{info.status}</text>
+            </p>
+            <p>{info.status}</p>
         </div>
         <div className='tag-marquee'>
             {/* eslint-disable-next-line jsx-a11y/no-distracting-elements */}

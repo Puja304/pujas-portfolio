@@ -607,7 +607,7 @@ body{
 
 /* final animatiom */
 .cat-container {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 7rem;    /* half of 14rem */

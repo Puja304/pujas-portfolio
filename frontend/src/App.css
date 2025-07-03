@@ -247,10 +247,6 @@ body{
   padding: 0%
 }
 
-.img-section img{
-  max-width: 19rem;
-  max-height: 10rem;
-}
 
 
 .project-tile:hover {
@@ -260,9 +256,18 @@ body{
   cursor: pointer;
 }
 
-.project-tile img{
-    width: 100%;
-    border-bottom: 0.2rem solid black;
+
+.img-section {
+  height: 11rem;
+  overflow: hidden;
+  border-bottom: 0.2rem solid black;
+}
+
+.project-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 0.5rem solid black;
 }
 
 .project-info {

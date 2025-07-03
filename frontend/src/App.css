@@ -247,6 +247,11 @@ body{
   padding: 0%
 }
 
+.img-section img{
+  max-width: 19rem;
+  max-height: 10rem;
+}
+
 
 .project-tile:hover {
   transform: translateY(-2px);

@@ -154,5 +154,18 @@
         "img":"friendsbook.png",
         "description":"Friendsbook is a C++ console-based application that models a simplified social networking system. Users can be added, removed, searched, or updated, and the system maintains user profiles containing names, usernames, email addresses, and birthdays. The underlying data structure is a custom-built fixed-capacity ADT that stores users in alphabetically sorted buckets using arrays and a consistent hashing scheme based on username initials. The implementation includes dynamic memory management, copy constructors, and deep copying logic. Designed and tested as part of a data structures assignment, this project emphasizes careful class design, object-oriented programming, and robust testing of all edge cases.",
         "git":"https://github.com/Puja304/friendsbook"
+    },
+    {
+        "name": "Whisper & Vault",
+        "date": "Jun '25",
+        "status":"Completed",
+        "languages":["Python, JavaScript, HTML, CSS"],
+        "frameworks":["React.js","Amazon API Gateway", "AWS Lambda", "AWS Secrets Manager", "Amazon DynamoDB", "SendGrid"],
+        "learnt":"AWS Integreation",
+        "mode":"solo",
+        "difficulty": 2,
+        "img":"whisperandvault.png",
+        "description":"Whisper and Vault is a secure, end-to-end encrypted messaging platform I built to deepen my understanding of serverless backend development with AWS. It allows users to send password-protected messages that are encrypted client-side and self-destruct after a limited number of views or a set duration. The platform features a React frontend and backend designed to handle message storage, email delivery, and access enforcement using AWS Lambda, API Gateway, DynamoDB, and SendGrid. Messages are encrypted using PBKDF2 and AES-CBC, ensuring that neither plaintext content nor passwords are ever stored. Whisper offers flexible view limits and a 30-day lifespan, while Vault enforces stricter controls with one view and 24-hour expiry. This project highlights my focus on security, privacy, and event-driven design using modern cloud tools.",
+        "git":"https://github.com/Puja304/whisperandvault-sender"
     }
 ]

@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/pujas-portfolio/static/css/main.c4fab2bd.css",
-    "main.js": "/pujas-portfolio/static/js/main.866d8cda.js",
-    "static/js/453.743387b3.chunk.js": "/pujas-portfolio/static/js/453.743387b3.chunk.js",
+    "main.css": "/pujas-portfolio/static/css/main.08e6e6ac.css",
+    "main.js": "/pujas-portfolio/static/js/main.64f5413c.js",
+    "static/js/453.cea6e6af.chunk.js": "/pujas-portfolio/static/js/453.cea6e6af.chunk.js",
     "static/media/myPic.jpg": "/pujas-portfolio/static/media/myPic.a0d004aec19cb84394fe.jpg",
     "static/media/cat-sprite.png": "/pujas-portfolio/static/media/cat-sprite.e832633de1646c7791ce.png",
     "static/media/hand.png": "/pujas-portfolio/static/media/hand.27222a600ee4e862ea70.png",
     "static/media/sakura.png": "/pujas-portfolio/static/media/sakura.785e59603a56aac9b6dd.png",
     "static/media/computer.png": "/pujas-portfolio/static/media/computer.dd23582fc8c6108d70c9.png",
     "index.html": "/pujas-portfolio/index.html",
-    "main.c4fab2bd.css.map": "/pujas-portfolio/static/css/main.c4fab2bd.css.map",
-    "main.866d8cda.js.map": "/pujas-portfolio/static/js/main.866d8cda.js.map",
-    "453.743387b3.chunk.js.map": "/pujas-portfolio/static/js/453.743387b3.chunk.js.map"
+    "main.08e6e6ac.css.map": "/pujas-portfolio/static/css/main.08e6e6ac.css.map",
+    "main.64f5413c.js.map": "/pujas-portfolio/static/js/main.64f5413c.js.map",
+    "453.cea6e6af.chunk.js.map": "/pujas-portfolio/static/js/453.cea6e6af.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4fab2bd.css",
-    "static/js/main.866d8cda.js"
+    "static/css/main.08e6e6ac.css",
+    "static/js/main.64f5413c.js"
   ]
 }

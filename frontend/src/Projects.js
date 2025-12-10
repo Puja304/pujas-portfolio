@@ -17,11 +17,38 @@ const Projects = () => {
     //project selected for modal display
     const [selectedProject, setSelectedProject] = useState(null);
 
+    // projects to show
+    const [projectsPerPage, setProjectsPerPage] = useState(6);
+
+
     //bools to tell weather or not a sort has been applied
     let isDateSorted, isLangSorted, isFrameSorted, isDiffSorted = false;
 
     const [activeSort, setActiveSort] = useState(""); // currently sorting on
 
+
+
+    useEffect(() => {
+    const updateProjectsPerPage = () => {
+        const width = window.innerWidth;
+        if (width < 600) setProjectsPerPage(1);
+        else if (width < 900) setProjectsPerPage(2);
+        else if (width < 1200) setProjectsPerPage(4);
+        else setProjectsPerPage(6);
+    };
+
+    updateProjectsPerPage(); // run on mount
+    window.addEventListener('resize', updateProjectsPerPage);
+
+    return () => window.removeEventListener('resize', updateProjectsPerPage);
+    }, []);
+
+    useEffect(() => {
+    // compute new slice based on current offset
+    setCurrentProjects(
+        allProjects.slice(projectNum, projectNum + projectsPerPage)
+    );
+    }, [projectsPerPage, allProjects, projectNum]); 
 
     useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/assets/documents/projects.json`)
@@ -29,24 +56,24 @@ const Projects = () => {
         .then(data => {
         setAllProjects(data);
         setOriginalProjects(data);
-        setCurrentProjects(data.slice(0, 6));
+        setCurrentProjects(data.slice(0, projectsPerPage));
         setProjectNum(0);
         });
     }, []); 
 
+
     
     const handleNextPage = () => {
-        if ((projectNum + 6) < allProjects.length){
-            setCurrentProjects(allProjects.slice(projectNum+6, projectNum+12));
-            setProjectNum(projectNum + 6);
+        if ((projectNum + projectsPerPage) < allProjects.length){
+             setProjectNum(projectNum + projectsPerPage);
         }
     }
 
     const handlePrevPage = () => {
-        if (projectNum >= 6)
+        if (projectNum >= projectsPerPage)
         {
-            setCurrentProjects(allProjects.slice(projectNum-6, projectNum));
-            setProjectNum(projectNum - 6);
+            setProjectNum(projectNum - projectsPerPage);
+
         }
     }
 
@@ -58,7 +85,7 @@ const Projects = () => {
         isFrameSorted = false;
         isDiffSorted = false;
         setAllProjects(originalProjects);
-        setCurrentProjects(originalProjects.slice(0, 6));
+        setCurrentProjects(originalProjects.slice(0, projectsPerPage));
         setProjectNum(0);
     };
     
@@ -74,7 +101,7 @@ const Projects = () => {
             isDiffSorted = true;
             const sorted = [...allProjects].sort((a, b) => a.difficulty - b.difficulty);
             setAllProjects(sorted);
-            setCurrentProjects(sorted.slice(0, 6));
+            setCurrentProjects(sorted.slice(0, projectsPerPage));
             setProjectNum(0);
         }
         // even click means descending
@@ -82,7 +109,7 @@ const Projects = () => {
             isDiffSorted = false;
             const sorted = [...allProjects].sort((a, b) => b.difficulty - a.difficulty);
             setAllProjects(sorted);
-            setCurrentProjects(sorted.slice(0, 6));
+            setCurrentProjects(sorted.slice(0, projectsPerPage));
             setProjectNum(0);
         }
         
@@ -101,7 +128,7 @@ const Projects = () => {
             return langA.localeCompare(langB);
             });
             setAllProjects(sorted);
-            setCurrentProjects(sorted.slice(0, 6));
+            setCurrentProjects(sorted.slice(0, projectsPerPage));
             setProjectNum(0);
         } else {
             isLangSorted = false;
@@ -111,7 +138,7 @@ const Projects = () => {
             return langB.localeCompare(langA);
             });
             setAllProjects(sorted);
-            setCurrentProjects(sorted.slice(0, 6));
+            setCurrentProjects(sorted.slice(0, projectsPerPage));
             setProjectNum(0);
         }
     };
@@ -129,7 +156,7 @@ const Projects = () => {
             return fwA.localeCompare(fwB);
             });
             setAllProjects(sorted);
-            setCurrentProjects(sorted.slice(0, 6));
+            setCurrentProjects(sorted.slice(0, projectsPerPage));
             setProjectNum(0);
         } else {
             isFrameSorted = false;
@@ -139,7 +166,7 @@ const Projects = () => {
             return fwB.localeCompare(fwA);
             });
             setAllProjects(sorted);
-            setCurrentProjects(sorted.slice(0, 6));
+            setCurrentProjects(sorted.slice(0, projectsPerPage));
             setProjectNum(0);
         }
     };
@@ -157,13 +184,13 @@ const Projects = () => {
                 isDateSorted = true;
                 const sorted = [...allProjects].sort((a, b) => parseDate(b.date) - parseDate(a.date)); // most recent first
                 setAllProjects(sorted);
-                setCurrentProjects(sorted.slice(0, 6));
+                setCurrentProjects(sorted.slice(0, projectsPerPage));
                 setProjectNum(0);
             } else {
                 isDateSorted = false;
                 const sorted = [...allProjects].sort((a, b) => parseDate(a.date) - parseDate(b.date)); // oldest first
                 setAllProjects(sorted);
-                setCurrentProjects(sorted.slice(0, 6));
+                setCurrentProjects(sorted.slice(0, projectsPerPage));
                 setProjectNum(0);
             }
     };
@@ -190,8 +217,8 @@ const Projects = () => {
                  ))}
             </div>
             <div className='prev-next'>
-                 <button className='prev' style={{visibility : projectNum >= 6 ? "visible" : "hidden"}} onClick={handlePrevPage}><p>&lt;</p></button>    {/* <  previous*/ }
-                 <button className='next' style={{visibility :  (projectNum+6)< allProjects.length ? "visible" : "hidden"}} onClick={handleNextPage}><p>&gt;</p></button>    {/* >  next*/ }
+                 <button className='prev' style={{visibility : projectNum >= projectsPerPage ? "visible" : "hidden"}} onClick={handlePrevPage}><p>&lt;</p></button>    {/* <  previous*/ }
+                 <button className='next' style={{visibility :  (projectNum+projectsPerPage)< allProjects.length ? "visible" : "hidden"}} onClick={handleNextPage}><p>&gt;</p></button>    {/* >  next*/ }
             </div>
         </div>
         {selectedProject && (

@@ -7,6 +7,7 @@ import About from './About'
 import Projects from './Projects'
 import Contact from './Contact'
 import Animated from './Animated'
+import MenuPhone from './MenuPhone'
 
 const MainPage = () => {
 
@@ -22,6 +23,13 @@ const MainPage = () => {
           scrollToContact={() => contactRef.current?.scrollIntoView({ behavior: 'smooth' })}
         />
         <Title/>
+        <div>
+          <MenuPhone
+          scrollToAbout={() => aboutRef.current?.scrollIntoView({ behavior: 'smooth' })}
+          scrollToProjects={() => projectsRef.current?.scrollIntoView({ behavior: 'smooth' })}
+          scrollToContact={() => contactRef.current?.scrollIntoView({ behavior: 'smooth' })}
+          />
+        </div>
         <Checkboard/>
         <div ref={aboutRef}>
           <About/>

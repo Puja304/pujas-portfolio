@@ -30,9 +30,11 @@ const ProjectModal = (props) => {
 
 
             <div className='project-win-body'>
-                <div className='github-note'>
-                    click ↑ name to go to github!
-                </div>
+                {props.git && (
+                    <div className='github-note'>
+                        click ↑ name to go to github!
+                    </div>
+                )}
                 <div className='description'>
                     <h4>Description</h4>
                     <p>{props.description}</p>

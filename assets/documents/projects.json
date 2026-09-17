@@ -1,5 +1,44 @@
 [
     {
+        "name":"Language-Grounded Robot Task Planning (USRA)",
+        "date":"May '26",
+        "status":"Ongoing",
+        "languages":["Python"],
+        "frameworks":["ROS2","URDF","Vicon Motion Capture","SAM3","AnyGrasp","RecGen"],
+        "learnt":"Embodied AI",
+        "mode":"team",
+        "difficulty": 3,
+        "img":"usra-robot.png",
+        "description":"An NSERC USRA project grounding LLM-based task planning in a model of object kinematics, verified in simulation before any real-world execution on a Stretch 3 robot. I stood up and debugged an unfamiliar RGB-D + IMU perception pipeline from a pre-built repo, diagnosing a data bottleneck and reconfiguring network settings, latency, and keyframe rates to reach 4x throughput. I also resolved sensor-to-robot calibration issues by recalibrating URDFs, deriving camera-to-base transforms, and using Vicon motion capture as ground truth, then designed a threaded ROS2 interface layer connecting perception to the task-planning/execution loop. Currently building an observation-driven articulated-object pipeline — RecGen-based mesh reconstruction combined with SAM3 part segmentation for link inference — so the task planner has an explicit model of each object's joints and what actions are actually possible on it, with that model feeding into a physics simulator to check feasibility and safety (joint limits, reachable grasps, collisions) before anything runs on hardware. AnyGrasp is being integrated for grasp execution.",
+        "git":""
+    },
+    {
+        "name":"iCradle",
+        "date":"May '26",
+        "status":"Ongoing",
+        "languages":["Python","JavaScript"],
+        "frameworks":["React.js","Flask","REST APIs","Agile/Scrum"],
+        "learnt":"Rule Engines",
+        "mode":"team",
+        "difficulty": 2,
+        "img":"icradle.png",
+        "description":"iCradle is a full-stack health-checkup application built for low- and middle-income countries, developed as a special research project with a 6-person team. Working across a React frontend and Flask backend, I self-assigned issues, ran code reviews, and served as the team's Product Owner — defining our versioning strategy, building workflow templates, and cleaning up the issue tracker to keep the team unblocked. On the technical side, I built out meaningful database seeding, fixed rule-engine logic that governs conditional workflows based on patient vitals, resolved versioning issues between workflow-form relationships, and helped safeguard patient data across the stack.",
+        "git":"https://github.com/drbfraser/CRADLE-Platform"
+    },
+    {
+        "name":"Storefront for Humane the Thrift Store",
+        "date":"Sept '24",
+        "status":"Ongoing",
+        "languages":["TypeScript","JavaScript"],
+        "frameworks":["Next.js","Tailwind CSS","GSAP","MongoDB","Stripe API"],
+        "learnt":"Payment Integration",
+        "mode":"solo",
+        "difficulty": 2,
+        "img":"humane.png",
+        "description":"A mobile-first, fully responsive e-commerce storefront built freelance for a real thrift store client using Next.js, TypeScript, and Tailwind CSS, with component-level performance optimizations and GSAP-driven motion for smooth, GPU-accelerated interactions. The initial static site drove a 20% increase in foot traffic after launch. I'm now architecting a scalable MongoDB backend with data models, API routes, and a secure admin dashboard so non-technical staff can manage inventory and content, and integrating Stripe for production-grade payments with webhook-based order verification and error-resilient checkout flows.",
+        "git":"https://github.com/Puja304/Humane"
+    },
+    {
         "name":"Weather Based Music Recommendation System",
         "date":"Apr '25",
         "status":"Completed",
